@@ -36,10 +36,49 @@ h2 {
     border-bottom: 1px solid #444;
 }
 
-#add-container input, #add-container button {
+/* tag criada inout pelo script durante a execução */
+input {
     padding: 10px;
     background-color: #393939;
     border: none;
+    width: 80%;
+    display: inline-block;
+}
+
+/* button atualizar durante a execução do codigo */
+
+button {
+   padding: 10px;
+   background-color: #393939;
+   border: none;
+   display: inline-block;
+    
+}
+
+button {
+    width: 18%;
+    cursor: pointer;
+    transition: .5s;
+}
+
+button i {
+    color: #ff7066;
+}
+
+button:hover{
+    background-color: #ff7066;
+}
+
+button:hover > i {
+    color: #242424;
+}
+
+/* Fim formatação de button */
+
+#add-container input, #add-container button {
+    padding: 10px;
+    background-color: #393939;
+    border: none;  
     width: 80%;
     display: inline-block;
 }
@@ -104,6 +143,15 @@ li {
    
 }
 
+/* Icone de editar tarefa */
+.fas  {
+    position: absolute;
+    right: 45px;
+    padding: 7px;
+    cursor: pointer;
+    color: #ff7066;
+}
+
 .fa-trash {
     position: absolute;
     right: 45px;
@@ -152,6 +200,8 @@ li {
         animation: move 0.5s ease-in-out;
         
     }
+
+    
 
     @keyframes move {
         0% { transform: skew(-10deg) translateX(0); }
